@@ -3,6 +3,15 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-steps/_s-steps.pug 
+include ../blocks/s-why/_s-why.pug 
+include ../blocks/s-training/_s-training.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sBelieve/_sBelieve.pug 
+include ../blocks/sWarning/_sWarning.pug 
+include ../blocks/sResults/_sResults.pug 
+include ../blocks/sAuthor/_sAuthor.pug 
+include ../blocks/sWhy2/_sWhy2.pug 
 
 block variables
 	- let  mainPage= null
@@ -10,11 +19,19 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent 
-	+mob-mnu()
-	+header()
-		+topLine()
-		+top-nav()
+	//- +mob-mnu()
+	//- +header()
+	//- 	+top-nav()
+	+topLine()
 	+headerBlock()
-	+sForm()
-	+sContact()
+
+	.bg
+		+s-training 
+		+sBelieve
+	+s-steps
+	+sWarning
+	+sResults
+	+sAuthor
+	+s-why
+	+sWhy2
 	+footer()

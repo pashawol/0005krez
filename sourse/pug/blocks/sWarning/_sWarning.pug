@@ -1,0 +1,18 @@
+mixin sWarning()
+	// start sWarning
+	+b.SECTION.sWarning.section#sWarning&attributes(attributes)
+		.container
+			+e.wrap
+				.row
+					.col
+						+e.title ВНИМАНИЕ! 
+						+e.title-sub Наш онлайн-курс&nbsp;&mdash; это не&nbsp;&laquo;рекламное завлечение&raquo;!
+						+e.text.strong Мы&nbsp;не&nbsp;рекламируем брокеров по&nbsp;партнерским ссылкам и&nbsp;не&nbsp;заставляем Вас покупать наши платные курсы или торговые программы.
+					.col-auto
+						+e.right-block
+							+e.text Просто попробуйте и&nbsp;убедитесь в&nbsp;том, что в&nbsp;Инфо-ДВД можно бесплатно получить&nbsp;то, за&nbsp;что в&nbsp;других местах с&nbsp;Вам попросят несколько десятков тысяч рублей!
+							.block-decorate
+								+e.btn.btn.lb_target(type="button") Успейте получить бесплатно
+							.time__block
+								.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+	// end sWarning

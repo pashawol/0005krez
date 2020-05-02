@@ -16,7 +16,8 @@
 
   @else {
     @include media-breakpoint-up($media) {
-      background-image: url(#{$url}#{$path2}#{$src});
+                  
+      background-image: url(#{$url}#{$path2}#{$src}); 
     }
 
     background-image: url(#{$url}#{$path1}#{$src});

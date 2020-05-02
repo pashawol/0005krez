@@ -18,6 +18,7 @@ global.$ = {
 	cssnano: require('cssnano'),
 	nested: require('postcss-nested'),
 	pcmq: require('postcss-combine-media-query'),
+	postcssCustomProperties: require('postcss-custom-properties'),
 	path: {
 		tasks: require('./gulp/config/tasks.js'),
 	},
@@ -42,8 +43,10 @@ $.gulp.task('default', $.gulp.series(
 		'img',
 		'libs',
 		'scripts',
+		'sass',
+		'serv', 'watch'
 		// 'scripts:common',
 		// 'scripts:app',
 	),
-	$.gulp.parallel('sass', 'watch', 'serv')
+	// $.gulp.parallel()
 ));

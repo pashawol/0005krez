@@ -1,0 +1,32 @@
+mixin sAuthor()
+	// start sAuthor
+	+b.SECTION.sAuthor.section.bg-wrap#sAuthor&attributes(attributes)
+		+pic("author-bg",'bg')(class="picture-bg")
+		.container
+			.row
+
+				.col
+					+b.section-title
+						h2 Автор онлайн-курса
+					+e.text По&nbsp;мнению клиентов, Павел Крез&nbsp;&mdash; один из&nbsp;самых компетентных и&nbsp;востребованных авторов издательства Инфо-ДВД, умеющий доносить даже самые сложные вещи простым языком!
+					ul
+						li
+							.strong Частный инвестор
+							| Организатор и&nbsp;руководитель команды профессиональных инвестиционных аналитиков
+						li
+							.strong Работал в банковской сфере
+							| С&nbsp;2004 по&nbsp;2016 год работал в&nbsp;банковской сфере, сделал успешную карьеру в&nbsp;одном из&nbsp;крупнейших федеральных банков
+						li
+							.strong Специалист
+							| по&nbsp;работе с&nbsp;предприятиями сегмента <br> крупного и&nbsp;крупнейшего бизнеса
+					+e.block
+						.text-warning Кредо
+						+e.line
+						.strong инвестиции с минимальными рисками
+				+e.col.col-lg-auto.order-lg-first
+					+e.img-wrap
+						+e.name
+							span Павел 
+							span Крез
+						+pic("author.png")
+	// end sAuthor

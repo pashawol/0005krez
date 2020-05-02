@@ -1,9 +1,13 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
+	+b.topLine
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				+e.text.col Бесплатно! Эксклюзивный онлайн-курс по&nbsp;заработку на&nbsp;акциях ОТС
+				
+				.col-auto
+					.d-none.d-sm-block
+						img.res-i(src="img/@2x/logo-text.png", alt="")
+					.d-sm-none
+						img.res-i(src="img/@2x/logo.png", alt="")
 	// end topLine

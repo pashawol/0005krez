@@ -1,0 +1,22 @@
+mixin sBelieve()
+	// start sBelieve
+	+b.SECTION.sBelieve.section#sBelieve&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 &laquo;Я&nbsp;не&nbsp;верю! Это всё теория и&nbsp;пустые обещания!&raquo;
+			+e.text Отлично! Продолжайте сомневаться. В&nbsp;том время, как Павел Крёз и&nbsp;его ученики продолжают зарабатывать и&nbsp;публично доказывать обратное.
+			.text-center
+					+e.play(href="https://vimeo.com/411972359" data-fancybox="vid2")
+						img(src="img/svg/play.svg", alt="")
+						span Смотреть видео
+			.row
+				mixin item(i)
+					.col-sm-4
+						+e.img-wrap(href=`img/@2x/believe-xl-${i}.jpg` data-fancybox="bel")
+							img.res-i(src=`img/@2x/believe-${i}.jpg`, alt="")
+				+item(1)
+				+item(2)
+				+item(3) 
+			.block-decorate.text-center
+				+e.btn.btn.lb_target(type="button") Получите доступ бесплатно
+	// end sBelieve

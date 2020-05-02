@@ -1,0 +1,124 @@
+
+	// start .sWarning
+	.sWarning {
+		position: relative;
+		padding-bottom: rem(35);
+					&::before,
+					&::after {
+						z-index: -1;
+						content: '';
+						@include a-cent(y);
+						width: 790px;
+						height: 380px;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+					@include media-breakpoint-up(sm) {
+
+						&::before {
+							background-image: url(../img/@2x/warning-left.jpg);
+							left: 0;
+						}
+						
+						&::after {
+							background-image: url(../img/@2x/warning-right.jpg);
+							right: rem(-300);
+						}
+					}
+		&__wrap{ 
+			 @include media-breakpoint-down(xs) {
+				 margin-left: -15px;
+				 margin-right: -15px;
+			 }
+			color: #ffffff;
+				@include media-breakpoint-up(lg) {
+
+					background-image:url(../img/@2x/warning.png), linear-gradient(111.75deg, #FF7B27 -1.03%, #1A3F79 44.22%);
+				}
+				background-image:  linear-gradient(111.75deg, #FF7B27 -1.03%, #1A3F79 44.22%);
+					/* 2 */
+			
+			box-shadow: 0px 4px 50px rgba(90, 134, 235, 0.36);
+			border-radius: 10px;
+				@include media-breakpoint-up(lg) {
+
+					padding: rem(39) rem(49); 
+					padding-right: rem(60);
+				}
+				padding: rem(39) rem(30); 
+			background-repeat: no-repeat;
+			background-position: center bottom;
+
+
+
+		}
+		&__title{
+			font-weight: bold;
+			@include rfs(rem(70.5172px));
+			line-height: (89 / 70.5172);
+			margin-bottom: rem(15);
+		}
+		&__title-sub{
+			@extend .h2;
+			font-weight: bold;
+				@include media-breakpoint-up(lg) {
+
+					max-width: rem(420);
+				}
+			line-height: 1.2;
+			margin-bottom: rem(30);
+		}
+		&__text{
+				@include media-breakpoint-up(lg) {
+
+					max-width: rem(450); 
+				}
+			margin-bottom: rem(12);
+		}
+		&__btn{
+			@extend .btn-warning;
+			@extend .btn-block;
+			max-width: rem(400);
+			margin-top: rem(30);
+			margin-bottom: rem(30);
+			margin-left: auto;
+			margin-right: auto;
+			// margin-top: rem(30);
+		}
+		&__right-block{
+				@include media-breakpoint-up(lg) {
+
+					max-width: rem(400);
+				}
+
+		}
+		.idvd_timer{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sWarning

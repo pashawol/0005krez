@@ -1,0 +1,16 @@
+mixin sWhy2()
+	// start sWhy2
+	+b.SECTION.sWhy2.section#sWhy2&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 P.S. Почему рынок ОТС и&nbsp;именно сейчас?
+				
+			.row
+				mixin item(t,p)
+					+e.col.col-lg-4.col-md-6
+						+e.title!= t
+						p!= p
+				+item(`ПРОСТО И&nbsp;ДОСТУПНО КАЖДОМУ`,`Начните с&nbsp;небольшого депозита ($100) без специальных навыков и&nbsp;длительной подготовки`) 
+				+item(`СТРАТЕГИЯ ОТЛИЧНО РАБОТАЕТ В&nbsp;КРИЗИС`,`Ученики Павла Креза продолжают зарабатывать даже в&nbsp;условиях глобальной нестабильности на&nbsp;рынках!`) 
+				+item(`Получайте прибыль в&nbsp;валюте`,`Доллар и&nbsp;евро дорожают&nbsp;&mdash; Ваш заработок растет! Это&nbsp;ли не&nbsp;мечта?`) 
+	// end sWhy2

@@ -1,6 +1,21 @@
 
 	// start .topLine
 	.topLine {
+		background-color: #ffffff;
+		padding: rem(13) 0;
+		width: 100%;
+		line-height: (25 / 20);
+		// position: absolute;
+		// left: 0;
+		// top: 0;
+		
+		&__text{
+			opacity: 0.5;
+			font-weight: bold;
+		}
+		.row{
+			align-items: center;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -24,6 +39,11 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+		img{
+			max-width: 45px;
+		}
+		font-size: 14px;
+	} 
 
 } // end.topLine

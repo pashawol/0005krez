@@ -1,0 +1,154 @@
+
+	// start .sResults
+	.sResults {
+		.section-title{
+			margin-bottom: rem(20);
+		}
+		&__top-text{
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: rem(68);
+		}
+		&__slide{
+			padding: rem(30) rem(20);
+		}
+		&__img-wrap{
+			display: block;
+			background: #FFFFFF; 
+			box-shadow: 0px 4px rem(30px) rgba(90, 134, 235, 0.36);
+			border-radius: 10px;
+						@include media-breakpoint-up(lg) {
+
+							height: rem(163);
+						}
+			margin-bottom: rem(22);
+			padding: rem(20) 0;
+			position: relative;
+			&--sl{
+				max-width: rem(500);
+				margin-left: auto;
+				margin-right: auto;
+				padding: rem(10);
+					@include media-breakpoint-up(lg) {
+
+						height: initial;
+					}
+				 
+				text-align: center;
+
+			}
+
+		
+			&:hover{
+				box-shadow: 0px 0 0 rgba(90, 134, 235, 0.36);
+
+			}
+				&::after {
+
+					content: url(../img/svg/zoom.svg);
+					position: absolute;
+					right: rem(30);
+					bottom: rem(20);
+				}
+			img{
+				max-height: calc(100% - #{rem(20)});
+			}
+		}
+		&__text{
+			font-weight: bold;
+			text-align: center;
+			span{
+				color: $primary;
+			}
+		}
+		&__col{
+			margin-bottom: rem(44);
+		}
+		&__row{
+			@include media-breakpoint-up(xl) {
+
+				@include roww(20);
+			}
+		}
+		.slick-dots{
+			li{ 
+					opacity: 0.2;
+					background-color: #5A86EB; 
+							&:hover,
+							&.slick-active {
+								opacity: 1;
+								background-color: $primary;
+							}
+
+							&.slick-active {
+								opacity: 1;
+								box-shadow: 0px 4px 4px rgba(90, 134, 235, 0.47);
+							}
+			}
+		}
+		
+		&__slider{
+			margin-top: rem(15);
+			padding-left: rem(40);
+			padding-right: rem(40);
+			margin-left: auto;
+			margin-right: auto;
+			// max-width: rem(1060);
+			.slick-list{
+				// padding-left: rem(10);
+				// padding-right: rem(10);
+			}
+		}
+		.slick-arrow { 
+			margin-bottom: rem(50);
+			svg {
+				width: 18px;
+				height: 36px;
+
+				@include media-breakpoint-down(md) {
+					width: 18px;
+					height: 36px;
+
+				}
+						path {
+	
+							stroke: $primary !important;
+						}
+
+			}
+			}
+		 
+			&__btn{
+				@extend .btn-block;
+				@extend .btn-warning;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(562);
+				margin-top: rem(50);
+				margin-bottom: rem(34);
+			}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sResults

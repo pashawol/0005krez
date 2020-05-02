@@ -1,0 +1,29 @@
+mixin s-training()
+	// start s-training
+	+b.SECTION.s-training.section
+		.container
+			.section-title.text-center
+				h2 Прямо сейчас узнайте, как зарабатывать сотни (и&nbsp;тысячи) процентов прибыли на&nbsp;рынке ОТС!
+			//- +e.strong Аналогов не существует
+			+e.slider.slider-js
+				- for (var x = 1; x < 7; x++)
+					+e.slide
+						//- +e.img-wrap(href=`img/@2x/${x}lg.jpg`  )
+						//- 	img.res-i(src="#" data-lazy=`img/@2x/${x}.jpg`, alt="")
+						+e.img-wrap(href=`img/@2x/screen-1.jpg`  )
+							img.res-i(src="#" data-lazy=`img/@2x/screen-1.jpg`, alt="")
+			
+			+e.footer
+				.row
+					.col
+						h2 ОТС? Что это вообще такое? 
+						p Рынок ОТС&nbsp;&mdash; легальный внебиржевой рынок акций, строго контролируемый регуляторами. На&nbsp;ОТС торгуются акции стартапов и&nbsp;компаний малой капитализации.
+
+						p #[strong Стоимость 1&nbsp;акции может составлять всего несколько центов] или даже несколько сотых долей цента. На&nbsp;50&nbsp;долларов можно купить несколько тысяч акций компании!
+					.col-md-auto
+						+e.block
+							+e.text-block Cамое главное, что потенциал роста этих акций измеряется сотнями и&nbsp;тысячами процентов
+							+e.btn(href="img/@2x/screen-btn-1.jpg" data-fancybox="screen") Смотрите примеры >> 
+							a(href="img/@2x/screen-btn-2.jpg" data-fancybox="screen")
+							a(href="img/@2x/screen-btn-3.png" data-fancybox="screen")
+	// end s-training

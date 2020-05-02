@@ -1,0 +1,35 @@
+mixin sResults()
+	// start sResults
+	+b.SECTION.sResults.section#sResults&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Какой конкретно результат после обучения?
+			+e.top-text Лучшее доказательство&nbsp;&mdash; сделки наших учеников. Смотрите сами!
+			+e.row.row
+				mixin item(i, t, pr)
+					+e.col.col-lg-6
+						+e.item
+							+e.img-wrap(href=`img/@2x/result-${i}.png` data-fancybox="rew-1")
+								+pic(`result-${i}.png`)
+								//- img.res-i.lazy(src="#" data-src=`img/@2x/result-${i}.png`, alt="")
+							+e.text 
+								= t
+								span.price= pr
+				+item("1","9 000 руб. превратились"," в 41 460 руб.")
+				+item("2","3 000 руб. превратились ","в 17 000 руб.")
+				+item("3","3 000 руб. превратились ","в 15 000 руб.")
+				+item("4","3 000 руб. превратились"," в 21 000 руб.")
+				+item("5","12 000 руб. превратились в"," 44 000 руб.")
+				+item("6","3 000 руб. превратились в ","26 388 руб.")
+			+e.slider--js
+				mixin slide(i)
+					+e.slide
+						+e.img-wrap--sl(href=`img/@2x/rew-${i}.jpg` data-fancybox='rews')
+							img.res-i(src="#" data-lazy=`img/@2x/rew-${i}.jpg`, alt="")
+				+slide(1)
+				+slide(2)
+				+slide(1)
+				+slide(2)
+			.block-decorate
+				+e.btn.btn.lb_target(type="button") Заинтересовало? Хотите так же? Кликайте
+	// end sResults

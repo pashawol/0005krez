@@ -1,9 +1,29 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.SECTION.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section#headerBlock.bg-wrap&attributes(attributes)
+		+pic('head-bg','bg','lazy','0')(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 headerBlock
-				
-			.row
+			+e.body
+				h1.d-none.d-md-block Как получать #[span от&nbsp;264% до&nbsp;1810% в&nbsp;одной сделке,] торгуя дешевыми акциями ОТС?
+				.h1.d-md-none Как получать #[span от&nbsp;264% до&nbsp;1810% ] в&nbsp;одной сделке, торгуя дешевыми акциями ОТС?
+				+e.text Зарегистрируйтесь прямо сейчас и&nbsp;получите моментальный доступ к&nbsp;пошаговому онлайн-курсу
+				+e.btn-wrap.text-md-left.text-center
+					.block-decorate
+						+e.btn.btn.lb_target(type="button") Успейте получить бесплатно
+					.time__block
+						.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+				+e.img-wrap
+					+pic('head-man.png')
+			+e.panel
+				.row
+					.col
+						+e.panel-body
+							+e.title Думаете 1810% это преувеличение? Ничего подобного!
+							+e.panel-text Павел Крёз превратил 3.000 рублей в&nbsp;57.300 всего за&nbsp;46&nbsp;дней. Он&nbsp;сделал это публично на&nbsp;глазах 105 участников закрытой группы. Инфо-ДВД зафиксировали этот результат документально&nbsp;&mdash; Вы&nbsp;можете лично проверить!
+						+e.panel-foot(href="img/@2x/head-line.png" )
+							+pic("head-line.png")
+					.col-lg-auto
+						+e.video(href="https://vimeo.com/411972359" data-fancybox="vimeo")
+							img(src="img/svg/play.svg", alt="")
+							+e.DIV.play-text Смотрите видео как это было
 	// end headerBlock
