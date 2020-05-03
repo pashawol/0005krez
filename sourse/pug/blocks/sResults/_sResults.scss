@@ -29,6 +29,10 @@
 				margin-left: auto;
 				margin-right: auto;
 				padding: rem(10);
+			 
+				overflow: hidden;
+				position: relative;
+		 
 					@include media-breakpoint-up(lg) {
 
 						height: initial;
@@ -101,6 +105,8 @@
 		}
 		.slick-arrow { 
 			margin-bottom: rem(50);
+			top: rem(100);
+			transform: none;
 			svg {
 				width: 18px;
 				height: 36px;

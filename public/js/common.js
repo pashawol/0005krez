@@ -38,22 +38,50 @@ function eventHandler() {
 		slidesToShow: 1
 	}, "mobileFirst", true);
 
+	$.fancybox.defaults.backFocus = false;
 	$slickElement.slick(_objectSpread({}, defSl));
 	$('.slider-js').slick(_objectSpread({}, defSl));
-	$('.sResults__slider--js').slick(_objectSpread(_objectSpread({}, defSl), {}, {
-		responsive: [{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2
-			}
-		}]
-	})); // $('.fancy-gal:not(.slick-cloned)').fancybox();
+	$('.sResults__slider--js').slick({
+		// ...defSl,
+		speed: 600,
+		infinite: true,
+		arrows: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		dots: true,
+		// autoplay: true,
+		// autoplaySpeed: 6000,
+		// lazyLoad: 'progressive',
+		slidesToShow: 1,
+		// mobileFirst: true,
+		adaptiveHeight: true
+	}); // $('.fancy-gal:not(.slick-cloned)').fancybox();
+	// $().fancybox({
+	// 	selector: '.s-training .slick-slide:not(.slick-cloned) a',
+	// });
 
 	$().fancybox({
-		selector: '.s-training .slick-slide:not(.slick-cloned) a'
+		selector: '.sResults__slider--js .slick-slide:not(.slick-cloned) a'
 	});
-	$().fancybox({
-		selector: '.s-rews .slick-slide:not(.slick-cloned) a'
+	$(".link-modal").fancybox({
+		arrows: false,
+		infobar: false,
+		touch: false,
+		type: 'inline',
+		i18n: {
+			en: {
+				CLOSE: "Закрыть",
+				NEXT: "Вперед",
+				PREV: "Назад" // PLAY_START: "Start slideshow",
+				// PLAY_STOP: "Pause slideshow",
+				// FULL_SCREEN: "Full screen",
+				// THUMBS: "Thumbnails",
+				// DOWNLOAD: "Download",
+				// SHARE: "Share",
+				// ZOOM: "Zoom"
+
+			}
+		}
 	});
 	$(function () {
 		var today = new Date();

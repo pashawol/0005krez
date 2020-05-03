@@ -487,3 +487,9 @@ iframe {
 .bg{
 	background: linear-gradient(180deg, #1A3F79 0%, rgba(26, 63, 121, 0.15) 53.65%, rgba(26, 63, 121, 0) 100%);
 }
+[data-fancybox-thumbs],
+[data-fancybox-play],
+[data-fancybox-zoom],
+.fancybox-infobar{
+	display: none;
+}

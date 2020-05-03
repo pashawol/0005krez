@@ -23,13 +23,23 @@ mixin sResults()
 				+item("6","3 000 руб. превратились в ","26 388 руб.")
 			+e.slider--js
 				mixin slide(i)
+					
+					+e.img-wrap--sl(href=`img/@2x/slider-rew-${i}.png` data-fancybox='rews')
+						img.res-i(src=`img/@2x/slider-rew-${i}.png`, alt="")
+				mixin full(x)
 					+e.slide
-						+e.img-wrap--sl(href=`img/@2x/rew-${i}.jpg` data-fancybox='rews')
-							img.res-i(src="#" data-lazy=`img/@2x/rew-${i}.jpg`, alt="")
-				+slide(1)
-				+slide(2)
-				+slide(1)
-				+slide(2)
+						.row
+							.col-6
+								+slide(x)
+							.col-6
+								+slide(x + 1)
+				- for (var x = 0; x < 9; x++)
+					+full(2 * x  + 1)
+				+e.slide
+						.row
+							.col-6
+								+slide(19)
+				 
 			.block-decorate
 				+e.btn.btn.lb_target(type="button") Заинтересовало? Хотите так же? Кликайте
 	// end sResults
