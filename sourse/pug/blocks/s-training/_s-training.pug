@@ -5,14 +5,17 @@ mixin s-training()
 			.section-title.text-center
 				h2 Прямо сейчас узнайте, как зарабатывать сотни (и&nbsp;тысячи) процентов прибыли на&nbsp;рынке ОТС!
 			//- +e.strong Аналогов не существует
-			+e.slider.slider-js
-				- for (var x = 1; x < 7; x++)
-					+e.slide
-						//- +e.img-wrap(href=`img/@2x/${x}lg.jpg`  )
-						//- 	img.res-i(src="#" data-lazy=`img/@2x/${x}.jpg`, alt="")
-						+e.img-wrap(href=`img/@2x/screen-1.jpg`  data-fancybox="1gal")
-							img.res-i(src="#" data-lazy=`img/@2x/screen-1.jpg`, alt="")
-			
+			.slider-wrapper
+				+e.slider.slider-js.swiper-container
+					.swiper-wrapper
+						- for (var x = 1; x < 7; x++)
+							+e.slide.swiper-slide
+								//- +e.img-wrap(href=`img/@2x/${x}lg.jpg`  )
+								//- 	img.res-i(src="#" data-lazy=`img/@2x/${x}.jpg`, alt="")
+								+e.img-wrap(href=`img/@2x/screen-1.jpg`  data-fancybox="1gal")
+									img.res-i.swiper-lazy( src="#" data-src=`img/@2x/screen-1.jpg`, alt="")
+				+arrow
+				.swiper-pagination
 			+e.footer
 				.row
 					.col

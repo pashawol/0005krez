@@ -111,7 +111,12 @@
 
 		top: rem(150);
 	}
- 
+ .swiper-button-next:after,
+ .swiper-button-prev:after {
+ 	color: #ffffff;
+ 	font-size: rem(75);
+ }
+
 
 	@include media-breakpoint-up(lg) {}
 

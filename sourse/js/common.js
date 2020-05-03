@@ -3,71 +3,64 @@ const $ = jQuery;
 function eventHandler() {
 	// добавляет подложку для pixel perfect
 	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
-	const icon = `<svg width="49" height="100" viewBox="0 0 49 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 97L42.2218 57.7782C46.5176 53.4824 46.5176 46.5176 42.2218 42.2218L3.00001 3" stroke="white" stroke-width="6"/>
-</svg>`;
-	const arrl2 = (' <div class="r">' + icon),
-		arrr2 = (' <div class="l">' + icon);
-	// // карусель
-
-
-
-
-	var $status = $('.pagingInfo');
-	var $slickElement = $('.s-rews__slider--js');
-
-	$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-		//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-		var i = (currentSlide ? currentSlide : 0) + 1;
-		$status.html(i + '<span class="text-secondary"> /</span> ' + slick.slideCount);
-	});
-
+ 
 	let defSl = {
-		speed: 600,
-		infinite: true,
-		arrows: true,
-		mobileFirst: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-		dots: true,
-		// autoplay: true,
-		// autoplaySpeed: 6000,
-		lazyLoad: 'progressive',
-		slidesToShow: 1,
-		mobileFirst: true
-		// adaptiveHeight: true
+		speed: 800,
+		loop: true,
+		spaceBetween: 0,
+		// autoHeight: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+
+		
 	}
 	$.fancybox.defaults.backFocus = false;
-	$slickElement.slick({
-
-		...defSl
-
-	});
-
-	$('.slider-js').slick({
-
-		...defSl
-
-	});
-	$('.sResults__slider--js').slick({
-
-		// ...defSl,
-		speed: 600,
-		infinite: true,
-		arrows: true, 
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-		dots: true,
-		// autoplay: true,
-		// autoplaySpeed: 6000,
-		// lazyLoad: 'progressive',
-		slidesToShow:1,
-		// mobileFirst: true,
-		adaptiveHeight: true,
  
-	});
+	// $('.slider-js').slick({
 
+	// 	...defSl
+
+	// });
+	$(".section").each(function () {
+		
+		var mySwiper = new Swiper($(this).find('.slider-js'), {
+			...defSl,
+			navigation: {
+				nextEl: $(this).find('.swiper-button-next'),
+				prevEl: $(this).find('.swiper-button-prev'),
+			},
+			pagination: {
+				el: $(this).find('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+	})
+ 
+	$(".section").each(function () {
+		
+		var mySwiper = new Swiper($(this).find('.sResults__slider--js'), {
+			// speed: 400,
+			...defSl,
+			autoHeight: true,
+			navigation: {
+				nextEl: $(this).find('.swiper-button-next'),
+				prevEl: $(this).find('.swiper-button-prev'),
+			},
+			pagination: {
+				el: $(this).find('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+			breakpoints: { 
+				992: {
+					slidesPerView: 2
+				}
+			}
+		});
+	})
+ 
 	// $('.fancy-gal:not(.slick-cloned)').fancybox();
 	// $().fancybox({
 	// 	selector: '.s-training .slick-slide:not(.slick-cloned) a',

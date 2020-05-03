@@ -185,13 +185,15 @@ body {
 	}
  
 }
-
+.swiper-pagination,
 .slick-dots {
 	list-style: none;
 	text-align: center;
+	text-align: center;
+	justify-content: center;
 	// margin-top: rem(30);
-
-
+	width: 100%;
+	&-bullet,
 	li {
 		display: inline-block;
 		border-radius: 50%;
@@ -200,11 +202,12 @@ body {
 		background: #fff;
 		margin: rem(6);
 		@include mt;
+		opacity: 1;
 		cursor: pointer;
 		button {
 			display: none;
 		}
-
+		&.swiper-pagination-bullet-active,
 		&:hover,
 		&.slick-active {
 			background-color: $primary;
@@ -492,4 +495,12 @@ iframe {
 [data-fancybox-zoom],
 .fancybox-infobar{
 	display: none;
+}
+
+.slider-wrapper{
+	position: relative;
+}
+
+.swiper-button-hand{
+	outline: none;
 }
